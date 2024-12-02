@@ -36,6 +36,16 @@ def read_credentials(file_path):
     df = pd.read_csv(file_path, delim_whitespace=True)
     return df.iloc[0]['client_id'], df.iloc[0]['client_secret']
 
+def fetch_all_comments(submission):
+    submission.comments.replace_more(limit=None)  # Expand collapsed comments
+    top_level_comments = submission.comments
+    all_comments = list(top_level_comments)
+    
+    for more_comments in submission.comments.list():
+        all_comments.append(more_comments)
+    
+    return all_comments
+
 def main():
     if len(sys.argv) < 4:
         print("Usage: python aoc_language_histogram.py <reddit_thread_url> <day_number> <credentials_file>")
@@ -54,10 +64,9 @@ def main():
     )
 
     submission = reddit.submission(url=thread_url)
-    submission.comments.replace_more(limit=None)  # Ensure we fetch all comments
+    all_comments = fetch_all_comments(submission)
 
-    comments = submission.comments.list()
-    languages = extract_languages(comments)
+    languages = extract_languages(all_comments)
 
     language_counts = Counter(languages)
 
