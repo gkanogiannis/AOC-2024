@@ -2,3 +2,4 @@
 *.DS_Store
 credentials.txt
 *.reddit_files/
+*.html
