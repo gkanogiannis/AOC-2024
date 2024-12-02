@@ -7,4 +7,5 @@ https://www.reddit.com/r/adventofcode/comments/1h3vp6n/2024_day_1_solutions
     Part-2 : Sum all the differences.
 
 ***Day-2: Red-Nosed Reports***
+https://www.reddit.com/r/adventofcode/comments/1h4ncyr/2024_day_2_solutions/
 
