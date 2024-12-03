@@ -3,3 +3,7 @@
 credentials.txt
 *.reddit_files/
 *.html
+day-1/1.txt
+day-1/ArnoldC/day1.arnoldc
+*.input.txt
+README.local.md
