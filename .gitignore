@@ -5,5 +5,9 @@ credentials.txt
 *.html
 day-1/1.txt
 day-1/ArnoldC/day1.arnoldc
-*.input.txt
+*input.txt
+*.class
 README.local.md
+README.local.pdf
+.vscode
+*unknown*
